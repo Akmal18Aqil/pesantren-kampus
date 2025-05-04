@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #F8F9FA;
+    --foreground: #1E293B;
+    --card: #FFFFFF;
+    --card-foreground: #1E293B;
+    --popover: #FFFFFF;
+    --popover-foreground: #1E293B;
+    --primary: #0F7157; /* Main pesantren color - Green */
+    --primary-foreground: #FFFFFF;
+    --secondary: #4A5568;
+    --secondary-foreground: #FFFFFF;
+    --muted: #F1F5F9;
+    --muted-foreground: #64748B;
+    --accent: #155E75; /* Secondary accent */
+    --accent-foreground: #FFFFFF;
+    --destructive: #B91C1C;
+    --destructive-foreground: #FFFFFF;
+    --border: #E2E8F0;
+    --input: #E2E8F0;
+    --ring: #0F7157;
+    --radius: 0.5rem;
+
+    --sidebar-background: #FFFFFF;
+    --sidebar-foreground: #1E293B;
+    --sidebar-primary: #0F7157;
+    --sidebar-primary-foreground: #FFFFFF;
+    --sidebar-accent: #F1F5F9;
+    --sidebar-accent-foreground: #1E293B;
+    --sidebar-border: #E2E8F0;
+    --sidebar-ring: #0F7157;
+  }
+
+  .dark {
+    --background: #0F172A;
+    --foreground: #F8FAFC;
+    --card: #1E293B;
+    --card-foreground: #F8FAFC;
+    --popover: #1E293B;
+    --popover-foreground: #F8FAFC;
+    --primary: #22C55E; /* Lighter green for dark mode */
+    --primary-foreground: #1E293B;
+    --secondary: #64748B;
+    --secondary-foreground: #F8FAFC;
+    --muted: #334155;
+    --muted-foreground: #94A3B8;
+    --accent: #38BDF8;
+    --accent-foreground: #0F172A;
+    --destructive: #EF4444;
+    --destructive-foreground: #F8FAFC;
+    --border: #334155;
+    --input: #334155;
+    --ring: #22C55E;
+
+    --sidebar-background: #1E293B;
+    --sidebar-foreground: #F8FAFC;
+    --sidebar-primary: #22C55E;
+    --sidebar-primary-foreground: #0F172A;
+    --sidebar-accent: #334155;
+    --sidebar-accent-foreground: #F8FAFC;
+    --sidebar-border: #475569;
+    --sidebar-ring: #22C55E;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-primary-foreground px-4 py-2 rounded-md hover:opacity-90 transition-opacity;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground px-4 py-2 rounded-md hover:opacity-90 transition-opacity;
+  }
+
+  .input-field {
+    @apply px-4 py-2 border border-input rounded-md bg-card text-card-foreground focus:outline-none focus:ring-2 focus:ring-ring w-full;
+  }
+
+  .card {
+    @apply bg-card text-card-foreground p-6 rounded-lg border border-border shadow-sm;
+  }
+}
+
+nextjs-portal {
+  display: none;
+}
